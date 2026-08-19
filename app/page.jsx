@@ -1002,7 +1002,7 @@ export default function Portfolio() {
           <StatBlock value="2" label="Live Systems" delay={0} />
           <StatBlock value="7" label="Open Repos" delay={80} />
           <StatBlock value="9+" label="AWS Services" delay={160} />
-          <StatBlock value="100+" label="Tasks Shipped" delay={240} />
+          <StatBlock value="14" label="Technologies" delay={240} />
         </div>
       </section>
 
