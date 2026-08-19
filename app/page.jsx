@@ -1128,7 +1128,7 @@ export default function Portfolio() {
 
           <Reveal delay={140}>
             <p className="mt-4 text-[18px]" style={{ fontFamily: "var(--font-cosmosoracle)", color: "var(--color-stone)" }}>
-              Full-stack / Backend Developer
+              Full Stack Developer / IT Infrastructure
             </p>
           </Reveal>
 
