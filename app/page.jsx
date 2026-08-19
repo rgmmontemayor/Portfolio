@@ -168,6 +168,59 @@ function ExpressIcon(p) {
   );
 }
 
+function N8nIcon(p) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...p}>
+      <circle cx="4.8" cy="12" r="2.3" stroke="currentColor" strokeWidth="1.25" />
+      <circle cx="18.6" cy="6" r="2.3" stroke="currentColor" strokeWidth="1.25" />
+      <circle cx="18.6" cy="18" r="2.3" stroke="currentColor" strokeWidth="1.25" />
+      <path d="M6.9 11 16.5 7" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" />
+      <path d="M6.9 13 16.5 17" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function LaravelIcon(p) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...p}>
+      <rect x="2.5" y="2.5" width="19" height="19" rx="4" stroke="currentColor" strokeWidth="1.3" />
+      <path
+        d="M7.2 8.4v8.4M7.2 8.4l4.6 2.6M11.8 11v6.8M11.8 11l4.8-2.6v8.4l-4.8 2.6"
+        stroke="currentColor"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function LinuxIcon(p) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...p}>
+      <circle cx="12" cy="6.6" r="2.3" stroke="currentColor" strokeWidth="1.2" />
+      <ellipse cx="12" cy="14.4" rx="5.2" ry="6.2" stroke="currentColor" strokeWidth="1.2" />
+      <circle cx="9.7" cy="10.6" r="0.85" fill="currentColor" />
+      <circle cx="14.3" cy="10.6" r="0.85" fill="currentColor" />
+      <path d="M9.2 13.6c1 .8 1.9.8 2.8 0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+      <path d="M8.3 19.4c1.1-.6 2.4-.9 3.7-.9s2.6.3 3.7.9" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function CiscoIcon(p) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...p}>
+      <path
+        d="M3 14.2V11M6.5 12.8V9.4M10 11.6V8.4M12 11V7.8M14 11.6V8.4M17.5 12.8V9.4M21 14.2V11"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 const TECH_STACK = [
   { name: "Next.js", Icon: NextIcon },
   { name: "React", Icon: ReactIcon },
@@ -180,9 +233,12 @@ const TECH_STACK = [
   { name: "Python", Icon: PythonIcon },
   { name: "JavaScript", Icon: JavaScriptIcon },
   { name: "PHP", Icon: PhpIcon },
+  { name: "Laravel", Icon: LaravelIcon },
   { name: "Tailwind CSS", Icon: TailwindIcon },
   { name: "WordPress", Icon: WordPressIcon },
   { name: "Express", Icon: ExpressIcon },
+  { name: "n8n", Icon: N8nIcon },
+  { name: "Linux", Icon: LinuxIcon },
 ];
 
 function Github(props) {
@@ -205,6 +261,7 @@ const FEATURED = [
     tech: "AWS Lambda · DynamoDB · S3 · CloudFront · Postman",
     url: "https://sosyalgenius.com",
     linkLabel: "Visit live site",
+    image: "/projects/sosyalgenius.png", 
     description:
       "Built the intake-to-delivery pipeline for a bug reporting tool used inside the SosyalGenius CMS — capturing submissions, storing metadata, and serving uploaded screenshots through CloudFront.",
     items: [
@@ -220,6 +277,7 @@ const FEATURED = [
     role: "Full-Stack Developer",
     tech: "Next.js · React · TypeScript · AWS (Lambda, DynamoDB, Cognito, Bedrock, EventBridge, SES) · Jest",
     url: null,
+    image: "/projects/virtualplatform.png", 
     description:
       "Core contributor on a large virtual events platform spanning attendee networking, live moderation, ticketing, and exhibitor tools. ~2.5 months, 100+ tracked tasks — not yet public.",
     items: [
@@ -236,6 +294,7 @@ const FEATURED = [
     tech: "WordPress · Elementor",
     url: "https://networkguard.co.uk",
     linkLabel: "Visit live site",
+    image: "/projects/networkguard.png", 
     description:
       "Worked alongside the dev team on a site for a Sophos-authorised reseller of enterprise firewalls, access points, switches, and MDR services across the UK.",
     items: [
@@ -254,6 +313,7 @@ const REPOS = [
     description:
       "Full-stack task dashboard with server-side pagination, search, filtering, and a persisted light/dark theme.",
     url: "https://github.com/rgmmontemayor/Task-System",
+    image: "/projects/tasksystem.png",
   },
   {
     name: "Leave Management System",
@@ -261,6 +321,7 @@ const REPOS = [
     description:
       "Serverless leave-request app — create, approve, reject, cancel — with a Next.js frontend.",
     url: "https://github.com/rgmmontemayor/leave-management",
+    image: "/projects/leavesystem.png",
   },
   {
     name: "Inventory Management System",
@@ -268,6 +329,7 @@ const REPOS = [
     description:
       "Serverless inventory backend with a single-table DynamoDB design and warehouse-scoped REST API.",
     url: "https://github.com/rgmmontemayor/inventory-management",
+    image: "/projects/inventory.png",
   },
   {
     name: "Event Management System",
@@ -275,6 +337,7 @@ const REPOS = [
     description:
       "Event platform with capacity-limited registrations and an authenticated Next.js client.",
     url: "https://github.com/rgmmontemayor/event-management",
+    image: "/projects/eventmanagement.png",
   },
   {
     name: "Paws & Co.",
@@ -282,6 +345,7 @@ const REPOS = [
     description:
       "Front-end e-commerce concept for a pet supply brand — listings, checkout, about pages.",
     url: "https://github.com/rgmmontemayor/Paws-Co",
+    image: "/projects/pawsandco.png",
   },
   {
     name: "Eco-nnect",
@@ -289,6 +353,7 @@ const REPOS = [
     description:
       "Community/rewards platform with PHP-based sign-in, sign-up, and profile flows.",
     url: "https://github.com/rgmmontemayor/Eco-nnect",
+    image: "/projects/econnect.png",
   },
   {
     name: "Pomodoro Timer",
@@ -296,6 +361,52 @@ const REPOS = [
     description:
       "Desktop productivity app pairing a Pomodoro countdown with an integrated to-do list.",
     url: "https://github.com/rgmmontemayor/Pomodoro-Timer",
+    image: "/projects/pomodoro.png",
+  },
+];
+
+const CERTIFICATIONS = [
+  {
+    name: "AWS Academy Cloud Architecting",
+    issuer: "AWS Academy",
+    year: "2025",
+    Icon: AwsIcon,
+  },
+  {
+    name: "AWS Academy Cloud Foundations",
+    issuer: "AWS Academy",
+    year: "2024",
+    Icon: AwsIcon,
+  },
+  {
+    name: "AWS Academy Engineering Ops Tech",
+    issuer: "AWS Academy",
+    year: "2025",
+    Icon: AwsIcon,
+  },
+  {
+    name: "CCNA: Introduction to Networks (ITN)",
+    issuer: "Cisco",
+    year: null,
+    Icon: CiscoIcon,
+  },
+  {
+    name: "CCNA: Switching, Routing & Wireless Essentials (SRWE)",
+    issuer: "Cisco",
+    year: null,
+    Icon: CiscoIcon,
+  },
+  {
+    name: "CCNA: Enterprise Networking, Security & Automation (ENSA)",
+    issuer: "Cisco",
+    year: null,
+    Icon: CiscoIcon,
+  },
+  {
+    name: "Cyber Threat Management",
+    issuer: "Cisco",
+    year: null,
+    Icon: CiscoIcon,
   },
 ];
 
@@ -544,13 +655,24 @@ function PatternHeader({ seed = 0, height = 200 }) {
   );
 }
 
+/* Shows a real screenshot when `image` is provided, otherwise falls back
+   to the dot-pattern placeholder so cards never look empty mid-migration. */
+function CardMedia({ image, alt, seed = 0, height = 200 }) {
+  if (!image) return <PatternHeader seed={seed} height={height} />;
+  return (
+    <div className="w-full overflow-hidden rounded-[16px]" style={{ height, backgroundColor: "var(--color-linen-canvas)" }}>
+      <img src={image} alt={alt} className="h-full w-full object-cover" loading="lazy" />
+    </div>
+  );
+}
+
 function ProjectCard({ project, index }) {
   return (
     <article
       className="rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
       style={{ backgroundColor: "var(--color-paper-white)", padding: "16px" }}
     >
-      <PatternHeader seed={index} height={180} />
+      <CardMedia image={project.image} alt={project.name} seed={index} height={180} />
 
       <div className="mt-5 flex flex-wrap items-start justify-between gap-3">
         <div>
@@ -614,7 +736,7 @@ function RepoCard({ repo, index }) {
       className="group flex flex-col rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
       style={{ backgroundColor: "var(--color-paper-white)", padding: "16px" }}
     >
-      <PatternHeader seed={index + 1} height={120} />
+      <CardMedia image={repo.image} alt={repo.name} seed={index + 1} height={120} />
       <div className="mt-4 flex items-start justify-between gap-2">
         <h3
           className="text-[18px] font-normal text-[var(--color-ink-black)]"
@@ -639,8 +761,39 @@ function RepoCard({ repo, index }) {
   );
 }
 
+function CertCard({ cert, index }) {
+  return (
+    <div
+      className="flex items-start gap-4 rounded-[16px] border p-5 transition-transform duration-300 hover:-translate-y-1"
+      style={{ borderColor: "var(--color-border-soft)", backgroundColor: "var(--color-paper-white)" }}
+    >
+      <div
+        className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[12px]"
+        style={{ backgroundColor: "var(--color-linen-canvas)" }}
+      >
+        <cert.Icon className="h-[18px] w-[18px] text-[var(--color-ink-black)]" />
+      </div>
+      <div>
+        <h3
+          className="text-[16px] leading-[1.3] text-[var(--color-ink-black)]"
+          style={{ fontFamily: "var(--font-cosmosoracle)", letterSpacing: "-0.18px" }}
+        >
+          {cert.name}
+        </h3>
+        <p
+          className="mt-1 text-[14px]"
+          style={{ fontFamily: "var(--font-cosmosoracle)", color: "var(--color-stone)" }}
+        >
+          {cert.issuer}
+          {cert.year ? ` · ${cert.year}` : ""}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 /* ============================================================
-   REMIX — horizontal, dual-direction tech-stack showcase
+   TECH SHOWCASE — horizontal, dual-direction tech-stack showcase
 ============================================================ */
 
 function TechTile({ name, Icon }) {
@@ -683,7 +836,7 @@ function MarqueeRow({ items, direction = "left", speed = 32 }) {
 }
 
 /* ============================================================
-   REMIX — floating logo collage for the hero (in place of photos)
+   FLOATING COLLAGE — floating logo collage for the hero (in place of photos)
 ============================================================ */
 
 const HERO_TILES = [
@@ -767,6 +920,7 @@ export default function Portfolio() {
     { label: "Stack", href: "#stack" },
     { label: "Projects", href: "#projects" },
     { label: "Repos", href: "#repos" },
+    { label: "Certs", href: "#certifications" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -885,7 +1039,7 @@ export default function Portfolio() {
           <a href="#" className="flex items-center gap-2 pl-2">
             <DotCluster size={18} />
             <span className="hidden text-[16px] font-medium sm:inline" style={{ fontFamily: "var(--font-cosmosoracle)" }}>
-              Roberto Gabriel Montemayor
+              Montemayor
             </span>
           </a>
 
@@ -1002,7 +1156,7 @@ export default function Portfolio() {
           <StatBlock value="2" label="Live Systems" delay={0} />
           <StatBlock value="7" label="Open Repos" delay={80} />
           <StatBlock value="9+" label="AWS Services" delay={160} />
-          <StatBlock value="14" label="Technologies" delay={240} />
+          <StatBlock value="17" label="Technologies" delay={240} />
         </div>
       </section>
 
@@ -1052,6 +1206,20 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Certifications */}
+      <section id="certifications" className="mx-auto max-w-[1280px] px-6 py-16">
+        <Reveal>
+          <EyebrowLabel>Certifications</EyebrowLabel>
+        </Reveal>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {CERTIFICATIONS.map((c, i) => (
+            <Reveal key={c.name} delay={i * 60}>
+              <CertCard cert={c} index={i} />
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* Footer / contact */}
       <footer id="contact" className="border-t" style={{ borderColor: "var(--color-border-soft)" }}>
         <div className="mx-auto max-w-[1280px] px-6 py-16">
@@ -1067,7 +1235,7 @@ export default function Portfolio() {
               className="mt-4 max-w-xl text-[16px] leading-[1.5]"
               style={{ fontFamily: "var(--font-cosmosoracle)", color: "var(--color-stone)", letterSpacing: "-0.18px" }}
             >
-              Open to full-stack and back-end roles — serverless AWS,
+              Open to full-stack and IT roles — serverless AWS,
               Next.js, or general web development and support.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
@@ -1075,12 +1243,9 @@ export default function Portfolio() {
               <span className="text-[14px]" style={{ fontFamily: "var(--font-cosmosoracle)", color: "var(--color-pebble)" }}>
                 [montemayorrgm@gmail.com]
               </span>
-            </div>
-            <div className="mt-12 flex items-center gap-2">
-              <DotCluster size={14} />
-              <p className="text-[12px]" style={{ fontFamily: "var(--font-cosmosoracle)", color: "var(--color-pebble)" }}>
-                built with Next.js &amp; Tailwind
-              </p>
+              <span className="text-[14px]" style={{ fontFamily: "var(--font-cosmosoracle)", color: "var(--color-pebble)" }}>
+                [Pampanga, Philippines]
+              </span>
             </div>
           </Reveal>
         </div>
