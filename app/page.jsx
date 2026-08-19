@@ -256,7 +256,7 @@ function Github(props) {
 const FEATURED = [
   {
     tagLabel: "Live",
-    name: "SosyalGenius.com",
+    name: "SosyalGenius",
     role: "Back-end Developer",
     tech: "AWS Lambda · DynamoDB · S3 · CloudFront · Postman",
     url: "https://sosyalgenius.com",
