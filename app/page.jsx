@@ -279,7 +279,7 @@ const FEATURED = [
     url: null,
     image: "/projects/virtualplatform.png", 
     description:
-      "Core contributor on a large virtual events platform spanning attendee networking, live moderation, ticketing, and exhibitor tools. ~2.5 months, 100+ tracked tasks — not yet public.",
+      "Core contributor on a large virtual events platform spanning attendee networking, live moderation, ticketing, and exhibitor tools. ~2.5 months, 100+ tracked tasks — not publicized.",
     items: [
       "Built AI-powered networking (AWS Bedrock) and an event-driven email notification system",
       "Developed moderation and Q&A dashboards with live polling and accessibility fixes",
