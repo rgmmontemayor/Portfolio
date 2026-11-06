@@ -669,7 +669,7 @@ function CardMedia({ image, alt, seed = 0, height = 200 }) {
 function ProjectCard({ project, index }) {
   return (
     <article
-      className="rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
+      className="flex h-full flex-col rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
       style={{ backgroundColor: "var(--color-paper-white)", padding: "16px" }}
     >
       <CardMedia image={project.image} alt={project.name} seed={index} height={180} />
@@ -712,7 +712,7 @@ function ProjectCard({ project, index }) {
         ))}
       </ul>
 
-      <div className="mt-5 flex flex-wrap gap-1.5">
+      <div className="mt-auto flex flex-wrap gap-1.5 pt-5">
         {project.tech.split(" · ").map((t) => (
           <TagPill key={t}>{t}</TagPill>
         ))}
@@ -764,7 +764,7 @@ function RepoCard({ repo, index }) {
 function CertCard({ cert, index }) {
   return (
     <div
-      className="flex items-start gap-4 rounded-[16px] border p-5 transition-transform duration-300 hover:-translate-y-1"
+      className="flex h-full items-start gap-4 rounded-[16px] border p-5 transition-transform duration-300 hover:-translate-y-1"
       style={{ borderColor: "var(--color-border-soft)", backgroundColor: "var(--color-paper-white)" }}
     >
       <div
@@ -1183,9 +1183,9 @@ export default function Portfolio() {
         <Reveal>
           <EyebrowLabel>Projects</EyebrowLabel>
         </Reveal>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 lg:auto-rows-fr lg:grid-cols-3">
           {FEATURED.map((p, i) => (
-            <Reveal key={p.name} delay={i * 100}>
+            <Reveal key={p.name} delay={i * 100} className="h-full">
               <ProjectCard project={p} index={i} />
             </Reveal>
           ))}
@@ -1197,7 +1197,7 @@ export default function Portfolio() {
         <Reveal>
           <EyebrowLabel>Repositories</EyebrowLabel>
         </Reveal>
-        <div className="grid auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
           {REPOS.map((r, i) => (
             <Reveal key={r.name} delay={i * 60} className="h-full">
               <RepoCard repo={r} index={i} />
@@ -1211,9 +1211,9 @@ export default function Portfolio() {
         <Reveal>
           <EyebrowLabel>Certifications</EyebrowLabel>
         </Reveal>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:auto-rows-fr sm:grid-cols-2 lg:grid-cols-3">
           {CERTIFICATIONS.map((c, i) => (
-            <Reveal key={c.name} delay={i * 60}>
+            <Reveal key={c.name} delay={i * 60} className="h-full">
               <CertCard cert={c} index={i} />
             </Reveal>
           ))}
