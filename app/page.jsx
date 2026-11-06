@@ -733,7 +733,7 @@ function RepoCard({ repo, index }) {
       href={repo.url}
       target="_blank"
       rel="noreferrer"
-      className="group flex flex-col rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
+      className="group flex h-full flex-col rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
       style={{ backgroundColor: "var(--color-paper-white)", padding: "16px" }}
     >
       <CardMedia image={repo.image} alt={repo.name} seed={index + 1} height={120} />
@@ -1197,9 +1197,9 @@ export default function Portfolio() {
         <Reveal>
           <EyebrowLabel>Repositories</EyebrowLabel>
         </Reveal>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {REPOS.map((r, i) => (
-            <Reveal key={r.name} delay={i * 60}>
+            <Reveal key={r.name} delay={i * 60} className="h-full">
               <RepoCard repo={r} index={i} />
             </Reveal>
           ))}
