@@ -333,17 +333,17 @@ const REPOS = [
   },
   {
     name: "Event Management System",
-    stack: "Node.js · Express · MongoDB · Next.js",
+    stack: "Node.js · Express · MySQL · Next.js",
     description:
-      "Event platform with capacity-limited registrations and an authenticated Next.js client.",
+      "Event platform with capacity-limited registrations, JWT authentication, and an authenticated Next.js client.",
     url: "https://github.com/rgmmontemayor/event-management",
     image: "/projects/eventmanagement.png",
   },
   {
     name: "Paws & Co.",
-    stack: "HTML · CSS · JavaScript",
+    stack: "HTML · CSS · JavaScript · n8n · Stripe (test mode)",
     description:
-      "Front-end e-commerce concept for a pet supply brand — listings, checkout, about pages.",
+      "E-commerce concept for a pet supply brand — listings, checkout, about pages — with orders routed through an n8n workflow and Stripe test-mode payments.",
     url: "https://github.com/rgmmontemayor/Paws-Co",
     image: "/projects/pawsandco.png",
   },
